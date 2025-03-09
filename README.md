@@ -59,10 +59,7 @@ El pipeline está diseñado para ser escalable, modular y flexible, permitiendo 
 
 4. **Verificar que los datos se hayan cargado correctamente:**
  - Se pueden usar herramientas como **pgAdmin**, **DBeaver** o la consola de PostgreSQL para explorar la base de datos.
- - 
-
-
-
+ - En la consola mistyras docker este corriendo y el contenedor de postgres esteé activo, podemos ejecutar: : `docker exec -it postgres_db psql -U admin -d films_database` , luego se    podrán hacer consultas SQL comunes como `SELECT * FROM customer;`. 
 
 ## Detalle de Implementación
 
