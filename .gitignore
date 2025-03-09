@@ -1,0 +1,28 @@
+# Archivos y carpetas de entorno virtual (aunque usas Docker, es buena práctica)
+venv/
+.env
+*.env
+
+# Archivos de compilación de Python
+*.pyc
+*.pyo
+*.pyd
+*/__pycache__/
+*/output/
+
+output/
+# Archivos de logs
+*.log
+logs/
+
+# Configuración específica de IDE (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.iml
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados por Docker
+*.pid

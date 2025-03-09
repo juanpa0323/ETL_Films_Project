@@ -1,0 +1,52 @@
+{
+    "store": [
+        "store_id SERIAL PRIMARY KEY",
+        "manager_staff_id INTEGER",
+        "address_id INTEGER",
+        "last_update TIMESTAMP"
+    ],
+    "customer": [
+        "customer_id SERIAL PRIMARY KEY",
+        "active INTEGER",
+        "segment VARCHAR(50)",
+        "store_id INTEGER",
+        "address_id INTEGER",
+        "customer_id_old VARCHAR(20)",
+        "first_name VARCHAR(50)",
+        "last_name VARCHAR(50)",
+        "email VARCHAR(100)",
+        "create_date DATE",
+        "last_update TIMESTAMP"
+    ],
+    "film": [
+        "film_id SERIAL PRIMARY KEY",
+        "title VARCHAR(100)",
+        "description TEXT",
+        "language_id INTEGER",
+        "original_language_id INTEGER",
+        "rental_duration INTEGER",
+        "rental_rate NUMERIC(5, 2)",
+        "replacement_cost NUMERIC(5, 2)",
+        "length INTEGER",
+        "rating VARCHAR(20)",
+        "release_year INTEGER",
+        "num_voted_users INTEGER",
+        "special_features TEXT",
+        "last_update TIMESTAMP"
+    ],
+    "inventory": [
+        "inventory_id SERIAL PRIMARY KEY",
+        "film_id INTEGER",
+        "store_id INTEGER",
+        "last_update TIMESTAMP"
+    ],
+    "rental": [
+        "rental_id SERIAL PRIMARY KEY",
+        "staff_id INTEGER",
+        "inventory_id INTEGER",
+        "customer_id INTEGER",
+        "rental_date TIMESTAMP",
+        "return_date TIMESTAMP",
+        "last_update TIMESTAMP"
+    ]
+}

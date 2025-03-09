@@ -1,0 +1,27 @@
+version: '3'
+services:
+  spark:
+    build: .
+    working_dir: /app
+    command: ["spark-submit", "src/app.py"]
+    ports:
+      - "4040:4040"  # UI de Spark
+      - "8000:8000"  # Puerto para métricas
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres  
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: films_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - filmsdata:/var/lib/postgresql/data
+
+volumes:
+  filmsdata:    

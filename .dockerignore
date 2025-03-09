@@ -1,0 +1,23 @@
+# Ignorar entornos virtuales
+venv/
+__pycache__/
+
+# Ignorar archivos temporales y logs
+*.log
+logs/
+
+# Ignorar configuraciones locales
+.vscode/
+.idea/
+*/ouput
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar el propio archivo .git y control de versiones
+.git/
+*.gitignore
+
+# Evitar incluir datos confidenciales
+*.env
