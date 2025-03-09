@@ -64,27 +64,27 @@ Las siguientes preguntas se formularon para obtener insights relevantes a partir
 ### 1. ¿Cuáles son las 5 categorías de películas con mayor número de registros?
   - **Función** top_5_special_features()
   - Devuelve una lista con las 5 categorías más comunes en la columna special_features.
-  - **Respuesta:** 
+  - **Respuesta:**  `['Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes']`
 
 ### 2. ¿Cuáles son las películas con la mayor tarifa de alquiler (rental_rate)?
   - **Función** top_10_expensive_movies()
   - Devuelve una lista de diccionarios con los títulos y tarifas de las 10 películas más caras.
-  - **Respuesta:**
+  - **Respuesta:**  `[{'title': 'BOOGIE AMELIE', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'APACHE DIVINE', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'ATTACKS HATE', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'AMERICAN CIRCUS', 'rental_rate': 4.99, 'special_features': 'Commentaries'},{'title': 'AIRPORT POLLOCK', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'CALENDAR GUNFIGHT', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'BROOKLYN DESERT', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'CASABLANCA SUPER', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'BUCKET BROTHERHOOD', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'AIRPLANE SIERRA', 'rental_rate': 4.99, 'special_features': 'Trailers'}]`
 
 ### 3. ¿Existe una relación entre el año de lanzamiento y la tarifa de alquiler?
   - **Función** rental_rate_by_year()
   - Devuelve una lista de diccionarios que muestra el promedio de la tarifa de alquiler por cada año de lanzamiento.
-  - **Respuesta:**
+  - **Respuesta:** ` [{'release_year': 2006, 'avg_rental_rate': 2.9797645854656536}]`
 
 ###  4. ¿Cuál es la duración promedio de alquiler por categoría?
   - **Función** avg_rental_duration_by_special_features()
   - Devuelve una lista de diccionarios con la duración promedio de alquiler por special_features.
-  - **Respuesta:**
+  - **Respuesta:** `[{'special_features': 'Behind the Scenes', 'avg_rental_duration': 5.25}, {'special_features': 'Deleted Scenes', 'avg_rental_duration': 5.0458015267175576}, {'special_features': 'Commentaries', 'avg_rental_duration': 5.031496062992126}, {'special_features': 'Trailers', 'avg_rental_duration': 4.912213740458015}]`
 
 ### 5. ¿Cuál es el cliente con mayor número de alquileres realizados?
   - **Función** top_customers_by_rentals()
   - Devuelve una lista de diccionarios  con los 5 clientes con mayor número de alquileres realizados
-  - **Respuesta:**
+  - **Respuesta:**`[{'customer_id': 148, 'first_name': 'ELEANOR', 'last_name': 'HUNT', 'total': 46}, {'customer_id': 526, 'first_name': 'KARL', 'last_name': 'SEAL', 'total': 45}, {'customer_id': 144, 'first_name': 'CLARA', 'last_name': 'SHAW', 'total': 42}, {'customer_id': 236, 'first_name': 'MARCIA', 'last_name': 'DEAN', 'total': 41}, {'customer_id': 469, 'first_name': 'WESLEY', 'last_name': 'BULL', 'total': 40}]`
 
 ---
 
