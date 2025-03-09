@@ -95,6 +95,5 @@ Las siguientes preguntas se formularon para obtener insights relevantes a partir
 - El diseño modular del proyecto permite agregar nuevas transformaciones o fuentes de datos con facilidad.
 - El entorno Dockerizado facilita el despliegue en diferentes entornos y garantiza la reproducibilidad del proyecto.
 - La implementación de métricas y logs brinda mayor control y visibilidad del proceso ETL, facilitando la detección y corrección de errores.
-- Se recomienda implementar un sistema de visualización para presentar de forma más intuitiva las tendencias y hallazgos clave.
 
 ---
