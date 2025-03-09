@@ -43,12 +43,12 @@ El pipeline está diseñado para ser escalable, modular y flexible, permitiendo 
 
 ## Instalación y Configuración
 
-1. **Clona el repositorio:**
+1. **Clonar el repositorio:**
    - git clone https://github.com/juanpa0323/ETL_Films_Project.git
    - cd ETL_Films_Project
 
 
-2. **Levanta los servicios usando Docker Compose:**
+2. **Levantar los servicios usando Docker Compose:**
    - docker-compose up --build 
    - Nota: Se debe instalar Docker Desktop primero 
 
@@ -57,14 +57,16 @@ El pipeline está diseñado para ser escalable, modular y flexible, permitiendo 
  - La interfaz web de Spark está disponible en el puerto **4040**.
  - La base de datos PostgreSQL está expuesta en el puerto **5432**.
 
-4. **Verifica que los datos se hayan cargado correctamente:**
-Se pueden usar herramientas como **pgAdmin**, **DBeaver** o la consola de PostgreSQL para explorar la base de datos.
+4. **Verificar que los datos se hayan cargado correctamente:**
+ - Se pueden usar herramientas como **pgAdmin**, **DBeaver** o la consola de PostgreSQL para explorar la base de datos.
+ - 
+
 
 
 
 ## Detalle de Implementación
 
-### 1. **Extracción (`extractor.py`)**
+### 1. **Extracción (`extract/extractor.py`)**
 - Extrae datos desde el archivo Excel `Films_2.xlsx`.
 - Utiliza PySpark para leer el archivo y manejar grandes volúmenes de datos de forma eficiente.
 
@@ -75,7 +77,7 @@ Se pueden usar herramientas como **pgAdmin**, **DBeaver** o la consola de Postgr
   - Validación de columnas requeridas.
   - Manejo de datos nulos.
 
-### 3. **Carga (`loader.py`)**
+### 3. **Carga (`load/loader.py`)**
   - Carga los datos transformados en PostgreSQL utilizando la API JDBC de PySpark.
   - Se implementa un sistema de manejo de errores para evitar interrupciones del flujo ETL.
   - Además, se genera una copia de los datos transformados en formato **Parquet**  en la carpeta `src/data/output`. Esto permite:
@@ -103,12 +105,6 @@ Se pueden usar herramientas como **pgAdmin**, **DBeaver** o la consola de Postgr
 ### 4. **PostgreSQL para el Almacenamiento**
  - PostgreSQL es una base de datos robusta y ampliamente utilizada, ideal para manejar datos estructurados.
 
- 
-
-## Futuras Mejoras
-  - Agregar pruebas unitarias para cada uno de los transformadores.
-  - Implementar un dashboard para monitorear el rendimiento del pipeline ETL.
-  - Optimizar las consultas SQL para mejorar la eficiencia del proceso de carga.
 
  
 
