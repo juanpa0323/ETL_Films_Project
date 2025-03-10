@@ -66,10 +66,10 @@ Las siguientes preguntas se formularon para obtener insights relevantes a partir
   - Devuelve una lista con las 5 categorías más comunes en la columna special_features.
   - **Respuesta:**  `['Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes']`
 
-### 2. ¿Cuáles son las películas con la mayor tarifa de alquiler (rental_rate)?
-  - **Función** top_10_expensive_movies()
-  - Devuelve una lista de diccionarios con los títulos y tarifas de las 10 películas más caras.
-  - **Respuesta:**  `[{'title': 'BOOGIE AMELIE', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'APACHE DIVINE', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'ATTACKS HATE', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'AMERICAN CIRCUS', 'rental_rate': 4.99, 'special_features': 'Commentaries'},{'title': 'AIRPORT POLLOCK', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'CALENDAR GUNFIGHT', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'BROOKLYN DESERT', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'CASABLANCA SUPER', 'rental_rate': 4.99, 'special_features': 'Trailers'}, {'title': 'BUCKET BROTHERHOOD', 'rental_rate': 4.99, 'special_features': 'Commentaries'}, {'title': 'AIRPLANE SIERRA', 'rental_rate': 4.99, 'special_features': 'Trailers'}]`
+### 2. ¿Cuál es el total de alquires por tienda ?
+  - **Función** total_rental_by_store()
+  - Devuelve una lista de diccionarios con el id de cata tienda y el total de alquileres.
+  - **Respuesta:**  `[{'store_id': 1, 'total': 12}, {'store_id': 2, 'total': 15816}]`
 
 ### 3. ¿Existe una relación entre el año de lanzamiento y la tarifa de alquiler?
   - **Función** rental_rate_by_year()

@@ -127,8 +127,8 @@ def main():
         Logger.add_to_log('info', "1. ->Top 5 special features con mayor número de registros:")
         Logger.add_to_log('info', str(insights.top_5_special_features()))
 
-        Logger.add_to_log('info', "2. ->Top 10 películas con la mayor tarifa de alquiler:")
-        Logger.add_to_log('info', str(insights.top_10_expensive_movies()))
+        Logger.add_to_log('info', "2. ->Total de alquileres por tienda:")
+        Logger.add_to_log('info', str(insights.total_rental_by_store(df_rental_clean, df_inventory_clean,df_store_clean)))
 
         Logger.add_to_log('info', "3. ->Relación entre el año de lanzamiento y la tarifa de alquiler:")
         Logger.add_to_log('info', str(insights.rental_rate_by_year()))
@@ -139,6 +139,8 @@ def main():
 
         Logger.add_to_log('info', "5. ->Top 5 clientes con mayor número de alquileres realizados:")
         Logger.add_to_log('info', str(insights.top_customers_by_rentals(df_rental_clean, df_inventory_clean,df_customer_clean)))
+        
+        
     
 
     except Exception as ex:

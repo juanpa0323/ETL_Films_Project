@@ -58,3 +58,16 @@ class FilmInsights:
             return [row.asDict() for row in customers_df.collect()]
         except Exception as ex:
             Logger.add_to_log('error', f'Error durante la consulta del cliente con más alquileres: {str(ex)}')
+            
+    def total_rental_by_store(self, rental_df, inventory_df, sotre_df):
+        try:
+            query_df = rental_df \
+              .join(inventory_df, "inventory_id", "inner")\
+              .join(sotre_df,'store_id',"inner")\
+              .groupby('store_id')\
+              .count()\
+              .withColumnRenamed('count','total')  
+
+            return [row.asDict() for row in query_df.collect()]
+        except Exception as ex:
+            Logger.add_to_log('error', f'Error durante la consulta de total de alquileres por tienda: {str(ex)}')        
