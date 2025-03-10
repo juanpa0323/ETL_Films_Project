@@ -12,7 +12,7 @@ venv/
 
 output/
 # Archivos de logs
-*.log
+app.log
 
 # Configuración específica de IDE (VSCode, PyCharm, etc.)
 .vscode/
