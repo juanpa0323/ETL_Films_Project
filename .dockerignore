@@ -1,10 +1,9 @@
 # Ignorar entornos virtuales
 venv/
 __pycache__/
-
+git y control de versiones
 # Ignorar archivos temporales y logs
 *.log
-logs/
 
 # Ignorar configuraciones locales
 .vscode/
@@ -15,7 +14,7 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Ignorar el propio archivo .git y control de versiones
+# Ignorar el propio archivo .
 .git/
 *.gitignore
 
